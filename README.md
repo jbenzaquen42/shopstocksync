@@ -1,16 +1,28 @@
 # ShopStockSync
 
-Simple public landing page for ShopStockSync.
+ShopStockSync is a small prototype project for inventory-sync workflows built around Etsy listing coordination and spreadsheet-based stock tracking.
 
-This repository contains a single-file HTML landing page suitable for GitHub Pages.
+## Current repository contents
 
-## Files
+- `index.html` — public landing page for the project
+- `prototype/sync_preview.py` — simple CLI preview script for stock reconciliation
+- `prototype/sample_inventory.csv` — sample dataset for local testing
 
-- `index.html` — one-page responsive landing page
+## Prototype usage
+
+```bash
+python3 prototype/sync_preview.py \
+  --csv prototype/sample_inventory.csv \
+  --low-stock-threshold 5
+```
+
+## What the prototype does
+
+- loads a local inventory CSV
+- counts low-stock items
+- reports active/inactive rows
+- prints a dry-run style sync summary
 
 ## Notes
 
-- Personal-use positioning
-- No frameworks
-- No JavaScript
-- No external CSS dependencies
+This repository is intentionally lightweight for early iteration and presentation.
